@@ -1,5 +1,6 @@
 import {PostsInterface} from '../interface/posts.interface'
 import postsEntity from '../entity/posts.entity'
+import { isValidObjectId } from 'mongoose'
 
 export class PostsModel{
     public static GetAll(){
@@ -16,6 +17,11 @@ export class PostsModel{
 
     public static GetByTitle(titleParam:string){
         const posts= postsEntity.find({title:titleParam})
+        return posts
+    }
+
+    public static Delete(titleP:string){
+        const posts= postsEntity.remove({title:titleP})
         return posts
     }
 }

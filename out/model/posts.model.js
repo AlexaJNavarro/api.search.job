@@ -30,5 +30,9 @@ class PostsModel {
         const posts = posts_entity_1.default.find({ title: titleParam });
         return posts;
     }
+    static Delete(titleP) {
+        const posts = posts_entity_1.default.remove({ title: titleP });
+        return posts;
+    }
 }
 exports.PostsModel = PostsModel;

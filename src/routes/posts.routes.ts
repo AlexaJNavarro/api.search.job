@@ -7,5 +7,7 @@ routerPosts
     .get("/",PostsController.GetAll)
     .post("/",PostsController.Create)
     .get("/:TITLE",PostsController.GetByTitle)
+    .delete("/:TITLE",PostsController.Delete)
+
 
 export default routerPosts

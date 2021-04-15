@@ -6,5 +6,6 @@ const routerPosts = express_1.Router();
 routerPosts
     .get("/", posts_controller_1.PostsController.GetAll)
     .post("/", posts_controller_1.PostsController.Create)
-    .get("/:TITLE", posts_controller_1.PostsController.GetByTitle);
+    .get("/:TITLE", posts_controller_1.PostsController.GetByTitle)
+    .delete("/:TITLE", posts_controller_1.PostsController.Delete);
 exports.default = routerPosts;

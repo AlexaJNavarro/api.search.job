@@ -45,4 +45,10 @@ export class PostsController{
         }
 
     }
+
+    public static async Delete(req:Request, res:Response):Promise<Response>{
+        const title = req.params.title
+        const posts = await PostsModel.Delete(title)
+        return res.status(200).json(posts)
+    }
 }

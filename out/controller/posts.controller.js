@@ -54,5 +54,12 @@ class PostsController {
             }
         });
     }
+    static Delete(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const title = req.params.title;
+            const posts = yield posts_model_1.PostsModel.Delete(title);
+            return res.status(200).json(posts);
+        });
+    }
 }
 exports.PostsController = PostsController;
